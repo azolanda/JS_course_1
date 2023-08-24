@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <!-- Необходимо пользователя попросить ввести температуру в градусах Цельсия,
     преобразовать введенное пользователем значение в соответствующую температуру
@@ -18,11 +20,12 @@
     Уточнение: пользователь всегда вводит корректное число. -->
     <script>
         "use strict";
-        
-        let cel = prompt("Введите температуру по Цельсию:  ");
-        let far = (9 / 5) * cel + 32;
+
+        let cel = +prompt("Введите температуру по Цельсию:  ");
+        let far = Math.round(((9 / 5) * cel + 32) * 100) / 100;
 
         console.log(`Градусы Цельсия: ${cel}, по Фаренгейту: ${far}.`);
     </script>
 </body>
+
 </html>
