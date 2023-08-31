@@ -18,8 +18,6 @@ console.log(sum(2, 6)); должно вывести число 8 в консол
 Демонстрировать работы функций не обязательно.
 */
 
-"use strict";
-
 const firstNum = +prompt('Введите первое число:');
 const secondNum = +prompt('Введите второе число:');
 
@@ -27,12 +25,8 @@ const sum = (firstNum, secondNum) => firstNum + secondNum;
 const difference = (firstNum, secondNum) => {
     if (firstNum > secondNum) {
         return firstNum - secondNum;
-    } else if (firstNum === secondNum) {
-        return 0;
-    } else {
-        return secondNum - firstNum;
-    }
-    
+    } 
+    return secondNum - firstNum;    
 }
 const multiple = (firstNum, secondNum) => firstNum * secondNum;
 const division = (firstNum, secondNum) => firstNum / secondNum;

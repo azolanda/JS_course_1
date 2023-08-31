@@ -9,12 +9,10 @@
 сообщение "Размер заработной платы за вычетом налогов равен N."
 */
 
-"use strict";
-
 const salary = +prompt('Введите размер заработной платы:');
 const getSalaryWithoutTax = salary => Math.round(salary * 0.87 * 100) / 100;
 
-if (Number.isNaN(salary) || salary < 0) {
+if (!Number.isFinite(salary) || salary < 0) {
     console.log('Значение задано неверно');
 } else {
     console.log(`Размер заработной платы за вычетом налогов равен ${getSalaryWithoutTax(salary)}.`);

@@ -7,8 +7,6 @@
 который получаем от функции, в консоль.
 */
 
-"use strict";
-
 const num = +prompt('Введите число для возведения в куб:');
 const getCube = num => Math.round(Math.pow(num, 3) * 100) / 100;
 

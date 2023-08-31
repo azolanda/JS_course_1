@@ -10,8 +10,6 @@
 три числа. Проверять их не нужно.
 */
 
-"use strict";
-
 const numFirst = +prompt('Введите первое число:');
 const numSecond = +prompt('Введите второе число:');
 const numThird = +prompt('Введите третье число:');
