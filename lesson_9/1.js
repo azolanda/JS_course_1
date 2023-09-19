@@ -16,8 +16,18 @@ request.onload = function() {
     } else {
         const receivedData = request.response;
         console.log(receivedData);
+
         for(let i = 0; i < receivedData.length; i++) {
-            localStorage.setItem(i, JSON.stringify(receivedData[i]));
+            const dataItem = JSON.stringify(receivedData[i]);
+            localStorage.setItem(i, dataItem);
+            const div = document.createElement('div');
+            const paragraph = document.createElement('p');
+            const button = document.createElement('button');
+            button.innerHTML = "Delete";
+            paragraph.textContent+= dataItem;
+            div.append(paragraph);
+            div.append(button);
+            document.body.append(div);
         }
     }
 };
