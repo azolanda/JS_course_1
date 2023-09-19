@@ -10,11 +10,24 @@ request.open('GET', 'https://jsonplaceholder.typicode.com/users');
 request.send();
 
 request.onload = function() {
-    if (request.status !== 200) {
+    if (request.status != 200) {
         console.log(`Error ${request.status}: ${request.statusText}`);
     } else {
         console.log(`Users: ${request.response}`);
     }
-}
+};
 
-request.abort();
+request.onprogress = function(event) {
+    if (event.lengthComputable) {
+        console.log(`Получено ${event.loaded} из ${event.total} байт`);
+    } else {
+        console.log(`Получено ${event.loaded} байт`);
+    }
+};
+
+request.onerror = function() {
+    console.log('Запрос не удался');
+};
+
+// request.onload();
+// request.abort();
