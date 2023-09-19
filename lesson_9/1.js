@@ -24,6 +24,11 @@ request.onload = function() {
             const paragraph = document.createElement('p');
             const button = document.createElement('button');
             button.innerHTML = "Delete";
+            button.setAttribute('data-id', i);
+            button.onclick = function() {
+                button.parentElement.remove();
+                localStorage.removeItem(button.dataset.id);
+            };
             paragraph.textContent+= dataItem;
             div.append(paragraph);
             div.append(button);
@@ -43,5 +48,3 @@ request.onprogress = function(event) {
 request.onerror = function() {
     console.log('Запрос не удался');
 };
-
-// request.abort();
