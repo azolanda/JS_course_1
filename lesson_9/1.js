@@ -7,13 +7,18 @@
 
 const request = new XMLHttpRequest();
 request.open('GET', 'https://jsonplaceholder.typicode.com/users');
+request.responseType = 'json';
 request.send();
 
 request.onload = function() {
     if (request.status != 200) {
         console.log(`Error ${request.status}: ${request.statusText}`);
     } else {
-        console.log(`Users: ${request.response}`);
+        const receivedData = request.response;
+        console.log(receivedData);
+        for(let i = 0; i < receivedData.length; i++) {
+            localStorage.setItem(i, JSON.stringify(receivedData[i]));
+        }
     }
 };
 
@@ -29,5 +34,4 @@ request.onerror = function() {
     console.log('Запрос не удался');
 };
 
-// request.onload();
 // request.abort();
