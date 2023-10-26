@@ -4,10 +4,130 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      padding-top: 50px;
+      gap: 30px;
+      padding-left: calc(50% - 570px);
+      padding-right: calc(50% - 570px);
+    }
+
+    .item {
+      padding: 15px 17px;
+      border: 1px solid #aed6f9;
+      box-shadow: 10px 5px 5px #aed6f982;
+      max-width: 360px;
+    }
+
+    .item__about {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .item__description {
+      text-align: center;
+    }
+
+    .review__box-heading {
+      padding: 16px 0;
+    }
+
+    .review__box {
+      padding-bottom: 12px;
+    }
+    
+    .review__form {
+      padding-top: 16px;
+      border-top: 1px solid #aed6f982;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: 12px;
+    }
+    
+    .review__button {
+      background: #aed6f9;
+      padding: 5px 15px;
+    }
+  </style>
   <script src="1.js" defer></script>
-  <!-- <script src="2.js" defer></script> -->
+  <script src="2.js" defer></script>
 </head>
 <body>
-  
+  <div class="container">
+    <div class="item">
+      <div class="item__about">
+        <img src="img/apple.PNG" width="150" alt="item image" class="item__pic">
+        <h3 class="item__heading">Apple iPhone 13</h3>
+        <p class="item__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, nesciunt.</p>
+      </div>
+      <div class="reviews__block">
+        <h3 class="review__box-heading">Reviews</h3>
+        <form action="#" class="review__form">
+          <p>
+            <label for="user_id">Id:</label><br>
+            <input type="text" name = "user_id" class = "review__input-text user_id">
+          </p>
+          <p>
+            <label for="user_review">Review:</label><br>
+            <textarea name = "user_review" class = "review__input-text user_review"></textarea>
+          </p>          
+          <button type = "submit" class="review__button">Add review</button>
+        </form>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item__about">
+        <img src="img/apple.PNG" width="150" alt="item image" class="item__pic">
+        <h3 class="item__heading">Samsung Galaxy Z Fold 3</h3>
+        <p class="item__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, nesciunt.</p>
+      </div>
+      <div class="reviews__block">
+        <h3 class="review__box-heading">Reviews</h3>
+        <form action="#" class="review__form">
+          <p>
+            <label for="user_id">Id:</label><br>
+            <input type="text" name = "user_id" class = "review__input-text user_id">
+          </p>
+          <p>
+            <label for="user_review">Review:</label><br>
+            <textarea name = "user_review" class = "review__input-text user_review"></textarea>
+          </p>          
+          <button type = "submit" class="review__button">Add review</button>
+        </form>        
+      </div>
+    </div>
+    <div class="item">
+      <div class="item__about">
+        <img src="img/apple.PNG" width="150" alt="item image" class="item__pic">
+        <h3 class="item__heading">Sony PlayStation 5</h3>
+        <p class="item__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, nesciunt.</p>
+      </div>
+      <div class="reviews__block">
+        <h3 class="review__box-heading">Reviews</h3>
+        <form action="#" class="review__form">
+          <p>
+            <label for="user_id">Id:</label><br>
+            <input type="text" name = "user_id" class = "review__input-text user_id">
+          </p>
+          <p>
+            <label for="user_review">Review:</label><br>
+            <textarea name = "user_review" class = "review__input-text user_review"></textarea>
+          </p>
+          <button type = "submit" class="review__button">Add review</button>
+        </form>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
