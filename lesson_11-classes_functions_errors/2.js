@@ -91,7 +91,7 @@ function pushInitialReviewsOnSite(reviews) {
 
 function addNewReview(e) {
   e.preventDefault();
-  const productItem = e.target.parentElement.parentElement.parentElement;
+  const productItem = e.target.closest(".item");
   const productName = productItem.querySelector(".item__heading").innerHTML;
   const targetPlace = productItem.querySelector(".review__form");
 
@@ -102,9 +102,13 @@ function addNewReview(e) {
     if(userReview.value.length >= 50 && userReview.value.length <= 500) {
       const reviewObj = {id: userId.value, text: userReview.value};
       const reviewBox = createReviewBox(reviewObj);
-      
+            
       targetPlace.before(reviewBox);
       targetPlace.reset();
+
+      if(userReview.nextElementSibling && userReview.nextElementSibling.innerHTML === "Error! Invalid  length of the review") {
+        userReview.nextElementSibling.remove();
+      }
       
       for(const item of initialData) {
         if(item.product === productName) {
