@@ -34,7 +34,7 @@ function pushInitialProductsFromStorageOnSite() {
           <div class = \"item__about\">
             <h3 class=\"item__heading\">${storageItem[0]}</h3>
             <div class=\"reviews__block\">
-              <button class=\"review__box-heading\">View reviews</button>
+              <button class=\"review__box-heading\">Show reviews</button>
               <div class=\"review__box review_box-hidden\">
               </div>
             </div>
@@ -64,7 +64,13 @@ function pushInitialReviewsFromStorageOnSite(e) {
   e.preventDefault();
 
   const targetReviews = e.target;
-  targetReviews.nextElementSibling.classList.remove("review_box-hidden");
+  if(targetReviews.innerHTML === "Hide reviews") {
+    targetReviews.nextElementSibling.classList.add("review_box-hidden");
+    targetReviews.innerHTML = "Show reviews";
+  } else {
+    targetReviews.nextElementSibling.classList.remove("review_box-hidden");
+    targetReviews.innerHTML = "Hide reviews";
+  }  
 }
 
 function deleteReviewFromProduct(e) {
@@ -133,7 +139,7 @@ function addReview(e) {
           <div class = \"item__about\"><h3 class=\"item__heading\">${productName.value.trim()}</h3>
             <div class=\"reviews__block\">
               <button class=\"review__box-heading\" onclick = \"pushInitialReviewsFromStorageOnSite(event)\">
-                View reviews
+                Show reviews
               </button>
               <div class=\"review__box review_box-hidden\"></div>
             </div>
