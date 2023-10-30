@@ -2,7 +2,9 @@
 
 /*
 ###Задание
-Создайте интерактивную веб-страницу для оставления и просмотра отзывов о продуктах. Пользователи могут добавлять отзывы о различных продуктах и просматривать добавленные отзывы.
+Создайте интерактивную веб-страницу для оставления и просмотра отзывов о продуктах. 
+Пользователи могут добавлять отзывы о различных продуктах и 
+просматривать добавленные отзывы.
 
 Страница добавления отзыва:
 
@@ -130,7 +132,9 @@ function addReview(e) {
         <div class = \"item\">
           <div class = \"item__about\"><h3 class=\"item__heading\">${productName.value.trim()}</h3>
             <div class=\"reviews__block\">
-              <button class=\"review__box-heading\" onclick = \"pushInitialReviewsFromStorageOnSite(event)\">View reviews</button>
+              <button class=\"review__box-heading\" onclick = \"pushInitialReviewsFromStorageOnSite(event)\">
+                View reviews
+              </button>
               <div class=\"review__box review_box-hidden\"></div>
             </div>
           </div>
