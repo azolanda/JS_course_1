@@ -27,14 +27,28 @@ function pushInitialProductsFromStorageOnSite() {
       
       if(productReviewsData.length > 0) {
         console.log(storageItem[1].length);
-        container.insertAdjacentHTML("beforeend", `<div class = \"item\"><div class = \"item__about\"><h3 class=\"item__heading\">${storageItem[0]}</h3><div class=\"reviews__block\"><button class=\"review__box-heading\">View reviews</button><div class=\"review__box review_box-hidden\"></div></div></div></div>`);
+        container.insertAdjacentHTML("beforeend", `
+        <div class = \"item\">
+          <div class = \"item__about\">
+            <h3 class=\"item__heading\">${storageItem[0]}</h3>
+            <div class=\"reviews__block\">
+              <button class=\"review__box-heading\">View reviews</button>
+              <div class=\"review__box review_box-hidden\">
+              </div>
+            </div>
+          </div>
+        </div>`);
       
         let counter = 0;
 
         for(const productReview of productReviewsData) {
           const reviewBoxes = document.querySelectorAll(".review__box");
           const targetReviewBox = reviewBoxes[reviewBoxes.length - 1];
-          targetReviewBox.insertAdjacentHTML("beforeend", `<div class = \"review__item\"><p class = "review__text" data-count = \"${counter}\">${productReview}</p><button class = \"btn__deletereview\">Delete review</button></div>`);
+          targetReviewBox.insertAdjacentHTML("beforeend", `
+          <div class = \"review__item\">
+            <p class = "review__text" data-count = \"${counter}\">${productReview}</p>
+            <button class = \"btn__deletereview\">Delete review</button>
+          </div>`);
           counter++;
         }
       }
@@ -72,7 +86,11 @@ function deleteReviewFromProduct(e) {
 function pushOnPageReviewItem(elem, index, value) {
   const targetItem = elem.closest(".item__about");
   const targetReviewBox = targetItem.querySelector(".review__box");
-  targetReviewBox.insertAdjacentHTML("beforeend", `<div class = \"review__item\"><p class = "review__text" data-count = \"${index}\">${value}</p><button class = \"btn__deletereview\" onclick = \"deleteReviewFromProduct(event)\">Delete review</button></div>`);
+  targetReviewBox.insertAdjacentHTML("beforeend", `
+  <div class = \"review__item\">
+    <p class = "review__text" data-count = \"${index}\">${value}</p>
+    <button class = \"btn__deletereview\" onclick = \"deleteReviewFromProduct(event)\">Delete review</button>
+  </div>`);
 }
 
 function addReview(e) {
@@ -108,7 +126,15 @@ function addReview(e) {
       } else {
         localStorage.setItem(productName.value.trim(), JSON.stringify(new Array(userReview.value.trim())));
 
-        container.insertAdjacentHTML("beforeend", `<div class = \"item\"><div class = \"item__about\"><h3 class=\"item__heading\">${productName.value.trim()}</h3><div class=\"reviews__block\"><button class=\"review__box-heading\" onclick = \"pushInitialReviewsFromStorageOnSite(event)\">View reviews</button><div class=\"review__box review_box-hidden\"></div></div></div></div>`);
+        container.insertAdjacentHTML("beforeend", `
+        <div class = \"item\">
+          <div class = \"item__about\"><h3 class=\"item__heading\">${productName.value.trim()}</h3>
+            <div class=\"reviews__block\">
+              <button class=\"review__box-heading\" onclick = \"pushInitialReviewsFromStorageOnSite(event)\">View reviews</button>
+              <div class=\"review__box review_box-hidden\"></div>
+            </div>
+          </div>
+        </div>`);
 
         const headings = document.querySelectorAll(".item__heading");
         pushOnPageReviewItem(headings[headings.length - 1], 0, userReview.value.trim());
