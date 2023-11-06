@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    padding-left: calc(50% - 570px);
+    padding-right: calc(50% - 570px);
+    padding-top: 70px;
+}
+
+.heading {
+    text-align: center;
+    background: #aed6f9;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.lessons__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 33px;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.lessons__item {
+    padding: 15px 17px;
+    border: 1px solid #aed6f9;
+    box-shadow: 10px 5px 5px #aed6f982;
+    max-width: 360px;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.sign-up__button, .unsign-up__button {
+    background: #aed6f9;
+    padding: 5px 15px;
+    border: 1px solid #aed6f9;
+    transition: 0.7s background;
+}
+
+.sign-up__button:hover, .unsign-up__button:hover {
+    cursor: pointer;
+    background: white;
+}
+
+.sign-up__button:active, .unsign-up__button:active {
+    cursor: pointer;
+    background: #9cc1e1;
+}
+
+.button-blocked {
+    background: lightgray;
+}
+
+.button-blocked:hover {
+    background: lightgray;
+}

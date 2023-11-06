@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "Soccer",
+        "time_start": "2023-10-25T18:00:00Z",
+        "duration": "02:30:00",
+        "max_users": 11,
+        "current_users": 0
+    },
+    {
+        "id": 2,
+        "name": "Baseball",
+        "time_start": "2023-10-26T18:00:00Z",
+        "duration": "02:00:00",
+        "max_users": 15,
+        "current_users": 0
+    },
+    {
+        "id": 3,
+        "name": "Football",
+        "time_start": "2023-10-28T18:00:00Z",
+        "duration": "01:00:00",
+        "max_users": 15,
+        "current_users": 0
+    },
+    {
+        "id": 4,
+        "name": "Chess",
+        "time_start": "2023-11-01T18:00:00Z",
+        "duration": "03:00:00",
+        "max_users": 15,
+        "current_users": 0
+    },
+    {
+        "id": 5,
+        "name": "Fitness",
+        "time_start": "2023-11-03T18:00:00Z",
+        "duration": "02:30:00",
+        "max_users": 15,
+        "current_users": 0
+    }
+]
