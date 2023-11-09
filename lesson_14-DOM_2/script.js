@@ -37,7 +37,9 @@ function sliderChange(e) {
 
 function pushCircles() {
     for(const circleIndex of sliderImgsContainers.keys()) {
-        sliderCirclesContainer.insertAdjacentHTML("beforeend", `<div data-index = ${circleIndex} class = "slider__circle"></div>`);
+        sliderCirclesContainer.insertAdjacentHTML("beforeend", 
+            `<div data-index = ${circleIndex} class = "slider__circle"></div>`
+        );
     }
 }
 
