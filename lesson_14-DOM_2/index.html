@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="slider">
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 490.4 490.4" style="enable-background:new 0 0 490.4 490.4;" xml:space="preserve" width="45" class="slider__arrow slider__previous"><g><path d="M245.2,490.4c135.2,0,245.2-110,245.2-245.2S380.4,0,245.2,0S0,110,0,245.2C0,380.4,110,490.4,245.2,490.4z M245.2,24.5c121.7,0,220.7,99,220.7,220.7s-99,220.7-220.7,220.7s-220.7-99-220.7-220.7S123.5,24.5,245.2,24.5z"></path><path d="M198.9,322.8c2.4,2.4,5.5,3.6,8.7,3.6s6.3-1.2,8.7-3.6c4.8-4.8,4.8-12.5,0-17.3l-48-48h183.4c6.8,0,12.3-5.5,12.3-12.3s-5.5-12.3-12.3-12.3H168.3l48-48c4.8-4.8,4.8-12.5,0-17.3s-12.5-4.8-17.3,0l-68.9,68.9c-4.8,4.8-4.8,12.5,0,17.3L198.9,322.8z"></path></g></svg>
+            <div class="slider__box">
+                <div data-index = "0" class="slider__img-container slider__visible">
+                    <img src="img/photo-1.jpg" alt="slider img" class="slider__img">
+                </div>
+                <div data-index = "1" class="slider__img-container">
+                    <img src="img/photo-2.jpg" alt="slider img" class="slider__img">
+                </div>
+                <div data-index = "2" class="slider__img-container">
+                    <img src="img/photo-3.jpg" alt="slider img" class="slider__img">
+                </div>
+                <div data-index = "3" class="slider__img-container">
+                    <img src="img/photo-4.jpg" alt="slider img" class="slider__img">
+                </div>                
+                <div data-index = "4" class="slider__img-container">
+                    <img src="img/photo-5.jpg" alt="slider img" class="slider__img">
+                </div>                
+            </div>
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54 54" style="enable-background:new 0 0 54 54;" xml:space="preserve" width="45" class="slider__arrow slider__next"><g><path d="M27,0C12.112,0,0,12.112,0,27s12.112,27,27,27s27-12.112,27-27S41.888,0,27,0z M27,52C13.215,52,2,40.785,2,27S13.215,2,27,2s25,11.215,25,25S40.785,52,27,52z"></path><path d="M29.293,17.707L37.586,26H13c-0.552,0-1,0.447-1,1s0.448,1,1,1h24.586l-8.293,8.293l1.414,1.414L41.414,27L30.707,16.293L29.293,17.707z"></path></g></svg>
+        </div>
+        <div class="slider__circles"></div>
+    </div>
+</body>
+</html>
