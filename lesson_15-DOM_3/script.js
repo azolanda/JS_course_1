@@ -4,7 +4,10 @@ function drawPhoto(data) {
     if(data) {
         const src = data.urls.small;
         const photographName = data.user.name;
-        document.querySelector(".image__container").insertAdjacentHTML("afterbegin", `<img src="${src}" width = "300" alt="photo" class="img__new"><h3 class="photograph__name">${photographName}</h3>`);
+        document.querySelector(".image__container").insertAdjacentHTML("afterbegin", 
+            `<img src="${src}" width = "300" alt="photo" class="img__new">
+            <h3 class="photograph__name">${photographName}</h3>`
+        );
 
         previousPhotos.push(
             {
@@ -36,11 +39,12 @@ function uploadPreviousPhotos(e) {
         const photographName = previousPhotos[i].photographName;
         const likeCounter = previousPhotos[i].likeCounter;
         document.querySelector(".container").insertAdjacentHTML("beforeend", 
-        `<div class="image__container">
-        <img src="${src}" width = "300" alt="photo" class="img__new">
-        <h3 class="photograph__name">${photographName}</h3>
-        <p class="like__counter">Количество лайков: ${likeCounter}</p>
-        </div>`);
+            `<div class="image__container">
+                <img src="${src}" width = "300" alt="photo" class="img__new">
+                <h3 class="photograph__name">${photographName}</h3>
+                <p class="like__counter">Количество лайков: ${likeCounter}</p>
+            </div>`
+        );
     }
 }
 
