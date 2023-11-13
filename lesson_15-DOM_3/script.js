@@ -35,7 +35,12 @@ function uploadPreviousPhotos(e) {
         const src = previousPhotos[i].photoSrc;
         const photographName = previousPhotos[i].photographName;
         const likeCounter = previousPhotos[i].likeCounter;
-        document.querySelector(".container").insertAdjacentHTML("beforeend", `<div class="image__container"><img src="${src}" width = "300" alt="photo" class="img__new"><h3 class="photograph__name">${photographName}</h3><p class="like__counter">Количество лайков: ${likeCounter}</p></div>`);
+        document.querySelector(".container").insertAdjacentHTML("beforeend", 
+        `<div class="image__container">
+        <img src="${src}" width = "300" alt="photo" class="img__new">
+        <h3 class="photograph__name">${photographName}</h3>
+        <p class="like__counter">Количество лайков: ${likeCounter}</p>
+        </div>`);
     }
 }
 
