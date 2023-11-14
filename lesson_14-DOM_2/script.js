@@ -13,8 +13,8 @@ function sliderChange(e) {
     if(imgContainersQantity > 1) {
         const visibleImgContainer = removeVisibleClass();
         const indexOfImgContainer = visibleImgContainer.dataset.index;
-        
-        if(e.target.classList.contains("slider__next") || e.target.closest("slider__next")) {
+
+        if(e.target.classList.contains("slider__next") || e.target.closest("slider__next") || e.target.ownerSVGElement.classList.contains("slider__next")) {
             if(indexOfImgContainer < imgContainersQantity - 1) {
                 visibleImgContainer.nextElementSibling.classList.add("slider__visible");
             }
@@ -23,7 +23,7 @@ function sliderChange(e) {
             }
         }
     
-        if(e.target.classList.contains("slider__previous") || e.target.closest("slider__previous")) {
+        if(e.target.classList.contains("slider__previous") || e.target.closest("slider__previous") || e.target.ownerSVGElement.classList.contains("slider__previous")) {
             if(+indexOfImgContainer === 0) {
                 sliderImgsContainers[imgContainersQantity - 1].classList.add("slider__visible");
                 return;
