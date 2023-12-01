@@ -13,8 +13,7 @@ function binarySearch(array, num) {
     console.log(array);
     
     while(counter <= array.length) {
-        if(array[index] === num) {
-            console.log(index);
+        if(array[index] === num) {            
             return index;
         } else if(array[index] > num) {
             index = Math.round(index / 2);
@@ -27,13 +26,13 @@ function binarySearch(array, num) {
         }
         counter++;        
     }
-    console.log(-1);
+
     return -1;
 }
 
 const array = [1,2,5,4,6,8,17,9,11,7];
-binarySearch(array, 5);
-binarySearch(array, 22);
-binarySearch(array, 1);
-binarySearch(array, 17);
-binarySearch(array, 125);
+console.log(binarySearch(array, 5));
+console.log(binarySearch(array, 22));
+console.log(binarySearch(array, 1));
+console.log(binarySearch(array, 17));
+console.log(binarySearch(array, 125));
